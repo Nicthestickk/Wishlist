@@ -1,4 +1,4 @@
-package nskeliste.demo;
+package ønskeliste.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
