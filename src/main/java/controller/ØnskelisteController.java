@@ -10,4 +10,13 @@ public class ØnskelisteController {
     public String index(){
         return "index";
     }
+    @GetMapping("/søgListe")
+    public String søgListe(){
+        return "søgListe";
+    }
+    @GetMapping("/opretBruger")
+    public String opretBruger(){
+        return "opretBruger";
+    }
+
 }

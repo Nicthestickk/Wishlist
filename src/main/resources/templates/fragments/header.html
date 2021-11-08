@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonHead">
+    <meta charset="UTF-8">
+    <title th:include=":: #title">ØnskeListen</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header th:fragment="commonHeader">
+        <h1> Hejsa og velkommen til Ønskesedlen. Den bedste online service for at dele ønsker</h1>
+        <nav class="top-navigation">
+            <a class="forside" href="/">Forside</a>
+            <a class="search" href="/søgListe">SøgListe</a>
+        </nav>
+    </header>
+</body>
+</html>
