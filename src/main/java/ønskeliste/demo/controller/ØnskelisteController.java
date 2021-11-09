@@ -1,4 +1,4 @@
-package controller;
+package ønskeliste.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,15 +8,16 @@ public class ØnskelisteController {
 
     @GetMapping("/")
     public String index(){
-        return "index";
+        return "indexs";
     }
-    @GetMapping("/søgListe")
-    public String søgListe(){
-        return "søgListe";
+
+    @GetMapping("/searchList")
+    public String searchList(){
+        return "searchList";
     }
+
     @GetMapping("/opretBruger")
     public String opretBruger(){
         return "opretBruger";
     }
-
 }
