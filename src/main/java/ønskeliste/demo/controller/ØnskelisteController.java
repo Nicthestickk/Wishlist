@@ -8,16 +8,16 @@ public class ØnskelisteController {
 
     @GetMapping("/")
     public String index(){
-        return "indexs";
+        return "index";
     }
 
-    @GetMapping("/searchList")
-    public String searchList(){
-        return "searchList";
+    @GetMapping("/søgØnskeseddel")
+    public String søgØnskeseddel(){
+        return "søgØnskeseddel";
     }
 
-    @GetMapping("/opretBruger")
-    public String opretBruger(){
-        return "opretBruger";
+    @GetMapping("/opretØnskeseddel")
+    public String opretØnskeseddel(){
+        return "opretØnskeseddel";
     }
 }

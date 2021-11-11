@@ -3,14 +3,15 @@
 <head th:fragment="commonHead">
     <meta charset="UTF-8">
     <title th:include=":: #title">ØnskeListen</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header th:fragment="commonHeader">
         <h1> Hejsa og velkommen til Ønskesedlen. Den bedste online service for at dele ønsker</h1>
         <nav class="top-navigation">
             <a class="forside" href="/">Forside</a>
-            <a class="search" href="/searchList">SearchList</a>
+            <a class="søg" href="/søgØnskeseddel">Søg ønskeseddel</a>
+            <a class="opret" href="/opretØnskeseddel">Opret dig</a>
         </nav>
     </header>
 </body>
