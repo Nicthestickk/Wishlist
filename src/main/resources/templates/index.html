@@ -2,18 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:include="fragments/header :: commonHead">
     <title id="title">Forside</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body id="forside">
+
+<header th:replace="fragments/header :: commonHeader"></header>
+
 <div class="main-wrapper">
-    <header th:replace="fragments/header :: commonHeader"></header>
-    <p> Velkommen til Ønskesedlen. Tryk på opret liste for at lave din helt egen ønskeseddel som du kan dele med familie og venner</p>
-
-
-
-
-
+    <div class="forside">
+        <img id="forside-pic" src="forside-pic.jpg" alt="startside billede"/>
+        <p> Velkommen til Ønskesedlen. Tryk på opret liste for at lave din helt egen ønskeseddel som du kan dele med familie og venner</p>
+    <form method="get" action="/opretØnskeseddel">
+        <button type="submit">Opret din egen Ønskeseddel her</button>
+    </form>
+    </div>
     <footer th:replace="fragments/footer :: commonFooter"></footer>
-</div>
 </div>
 </body>
 </html>

@@ -1,8 +1,67 @@
 html {
     background-color: grey;
 }
+.top-navigation a {
+    color: darkred;
+    text-align: center;
+    padding: 13px 20px;
+    text-decoration: none;
+}
+
+.top-navigation a:hover {
+    background-color: #ddd;
+    text-decoration: underline;
+}
+
+header{
+text-align: center;
+}
 
 .main-wrapper {
+    text-align: center;
     flex-flow: column;
-    margin: 0 20px;
+
+}
+
+.top-navigation {
+    display: flex;
+    flex-flow: row;
+    background-color: #bbb;
+}
+
+footer {
+    color: white;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+#forside .top-navigation .forside,
+#søg .top-navigation .søg,
+#opret .top-navigation .opret {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.forside {
+    margin-right: auto;
+    padding: 100px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#forside-pic{
+    display: inline-block;
+    width: 400px;
+    height: auto;
 }
