@@ -13,20 +13,20 @@ public class Ønskelisterepo {
     List<Ønske> ønsker;
     Connection conn = DBManager.getConnection();
 
-    public List<Ønske> getAllWishes(){
+    public List<Ønske> getAllØnsker(){
         ønsker = new ArrayList<>();
 
         PreparedStatement stmt = null;
         try {
-            stmt = conn.prepareStatement("SELECT * FROM wish");
+            stmt = conn.prepareStatement("SELECT * FROM ønsker");
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()) {
                 Ønske ønske = new Ønske(
                         rs.getString("id"),
-                        rs.getString("name"),
+                        rs.getString("navn"),
                         rs.getString("link"),
-                        rs.getString("description")
+                        rs.getString("beskrivelse")
                 );
                 ønsker.add(ønske);
             }

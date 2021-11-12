@@ -13,7 +13,7 @@ public class ØnskelisteController {
 
     @GetMapping("/søgØnskeseddel")
     public String søgØnskeseddel(){
-        return "søgØnskeseddel";
+        return "visØnskeseddeller";
     }
 
     @GetMapping("/opretØnskeseddel")

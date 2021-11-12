@@ -13,7 +13,7 @@ public class test3 {
     }
 
     public List<Ønske> getAllMovies(){
-        return repository.getAllWishes();
+        return repository.getAllØnsker();
     }
 
 }

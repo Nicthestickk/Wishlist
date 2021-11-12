@@ -3,18 +3,18 @@ package ønskeliste.demo.model;
 public class Ønske {
 
     private String id;
-    private String name;
+    private String navn;
     private String link;
-    private String description;
-
+    private String beskrivelse;
+    private int ønskeListeID;
     public Ønske(String id, String length, String title, String subject, String popularity, String awards) {
     }
 
-    public Ønske(String id, String name, String link, String description) {
+    public Ønske(String id, String navn, String link, String beskrivelse) {
         this.id = id;
-        this.name = name;
+        this.navn = navn;
         this.link = link;
-        this.description = description;
+        this.beskrivelse = beskrivelse;
 
     }
 
@@ -26,12 +26,12 @@ public class Ønske {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNavn() {
+        return navn;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNavn(String navn) {
+        this.navn = navn;
     }
 
     public String getLink() {
@@ -42,21 +42,21 @@ public class Ønske {
         this.link = link;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBeskrivelse() {
+        return beskrivelse;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBeskrivelse(String beskrivelse) {
+        this.beskrivelse = beskrivelse;
     }
 
     @Override
     public String toString() {
         return"Ønsker{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + navn + '\'' +
                 ", link='" + link + '\'' +
-                ", description='" + description + '\'' +
+                ", description='" + beskrivelse + '\'' +
                 '}';
 
     }
