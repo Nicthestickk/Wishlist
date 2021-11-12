@@ -8,9 +8,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DBManger {
+public class DBManager {
 
-    private static String username;
+    private static String user;
     private static String password;
     private static String url;
     private static Connection connection = null;
@@ -24,13 +24,13 @@ public class DBManger {
             Properties properties = new Properties();
             properties.load(input);
             url = properties.getProperty("url");
-            username = properties.getProperty("username");
+            user = properties.getProperty("user");
             password = properties.getProperty("password");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
         try {
-            connection = DriverManager.getConnection(url,username, password);
+            connection = DriverManager.getConnection(url,user, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
