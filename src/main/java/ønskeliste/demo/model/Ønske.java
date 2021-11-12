@@ -2,27 +2,25 @@ package ønskeliste.demo.model;
 
 public class Ønske {
 
-    private String id;
+    private int id;
     private String navn;
     private String link;
     private String beskrivelse;
-    private int ønskeListeID;
-    public Ønske(String id, String length, String title, String subject, String popularity, String awards) {
-    }
+    private int ØnskeListeID;
 
-    public Ønske(String id, String navn, String link, String beskrivelse) {
+    public Ønske(int id, String navn, String link, String beskrivelse, int ØnskeListeID) {
         this.id = id;
         this.navn = navn;
         this.link = link;
         this.beskrivelse = beskrivelse;
-
+        this.ØnskeListeID = ØnskeListeID;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -49,15 +47,21 @@ public class Ønske {
     public void setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
     }
+    public int getØnskeListeID() {
+        return ØnskeListeID;
+    }
+    public void setØnskeListeID(int ønskeListeID) {
+        ØnskeListeID = ønskeListeID;
+    }
 
     @Override
     public String toString() {
-        return"Ønsker{" +
-                "id='" + id + '\'' +
-                ", name='" + navn + '\'' +
+        return "Ønske{" +
+                "id=" + id +
+                ", navn='" + navn + '\'' +
                 ", link='" + link + '\'' +
-                ", description='" + beskrivelse + '\'' +
+                ", beskrivelse='" + beskrivelse + '\'' +
+                ", ØnskeListeID=" + ØnskeListeID +
                 '}';
-
     }
 }

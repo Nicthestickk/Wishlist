@@ -23,10 +23,11 @@ public class Ønskelisterepo {
 
             while(rs.next()) {
                 Ønske ønske = new Ønske(
-                        rs.getString("id"),
+                        rs.getInt("id"),
                         rs.getString("navn"),
                         rs.getString("link"),
-                        rs.getString("beskrivelse")
+                        rs.getString("beskrivelse"),
+                        rs.getInt("ØnskeListeID")
                 );
                 ønsker.add(ønske);
             }
