@@ -58,5 +58,6 @@ public class Ønske {
                 ", link='" + link + '\'' +
                 ", description='" + description + '\'' +
                 '}';
+
     }
 }
