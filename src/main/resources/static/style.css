@@ -20,7 +20,6 @@ text-align: center;
 .main-wrapper {
     text-align: center;
     flex-flow: column;
-
 }
 
 .top-navigation {
@@ -44,15 +43,17 @@ footer {
     font-weight: bold;
 }
 
-.content {
-    margin-right: auto;
-    padding: 100px;
+ .content {
+    padding: 40px;
     background-color: #ddd;
     text-align: center;
 }
 
 h1 {
     font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+    padding: 0px;
 }
 
 img {
@@ -65,3 +66,4 @@ img {
     width: 400px;
     height: auto;
 }
+
