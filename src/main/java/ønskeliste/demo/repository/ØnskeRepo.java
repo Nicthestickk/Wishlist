@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ØnskeRepo {
-    List<Ønske> ønskes;
+    List<Ønske> ønsker;
     Connection conn = DBManager.getConnection();
 
     public List<Ønske> getAllØnsker(){
-        ønskes = new ArrayList<>();
+        ønsker = new ArrayList<>();
 
         PreparedStatement stmt;
         try {
@@ -28,7 +28,7 @@ public class ØnskeRepo {
                         rs.getString("URL"),
                         rs.getString("beskrivelse")
                 );
-                ønskes.add(ønske);
+                ønsker.add(ønske);
             }
 
         } catch (SQLException e) {
@@ -37,7 +37,7 @@ public class ØnskeRepo {
         }
 
 
-        return ønskes;
+        return ønsker;
     }
 
     public List<Ønske> tilføjØnskerTilØnskeListe(Ønske ønske) throws SQLException {
@@ -51,11 +51,11 @@ public class ØnskeRepo {
             stmt.setString(3, ønske.getURL());
             stmt.setString(4, ønske.getBeskrivelse());
 
-            return ønskes;
+            return ønsker;
 
         } catch (SQLException e){
             System.out.println(e.getMessage());
-            return ønskes;
+            return ønsker;
         }
     }
 }
