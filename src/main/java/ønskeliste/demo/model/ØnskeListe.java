@@ -10,8 +10,7 @@ public class ØnskeListe {
         this.ØnskeListeTitle = ønskeListeTitle;
         this.ØnskeListeEmail = ønskeListeEmail;
     }
-    public ØnskeListe(){
-    }
+    public ØnskeListe(){}
 
     public int getØnskeListeID() {
         return ØnskeListeID;

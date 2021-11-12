@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ønskelisterepo {
+public class ØnskeRepo {
     List<Ønske> ønsker;
     Connection conn = DBManager.getConnection();
 
@@ -18,16 +18,15 @@ public class Ønskelisterepo {
 
         PreparedStatement stmt = null;
         try {
-            stmt = conn.prepareStatement("SELECT * FROM ønsker");
+            stmt = conn.prepareStatement("SELECT * FROM ønske");
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()) {
                 Ønske ønske = new Ønske(
                         rs.getInt("id"),
-                        rs.getString("navn"),
-                        rs.getString("link"),
-                        rs.getString("beskrivelse"),
-                        rs.getInt("ØnskeListeID")
+                        rs.getString("title"),
+                        rs.getString("URL"),
+                        rs.getString("beskrivelse")
                 );
                 ønsker.add(ønske);
             }

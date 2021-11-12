@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:include="fragments/header :: commonHead">
-    <title id="title">Opret dig</title>
+    <title id="title">Opret ønske</title>
 </head>
 <body id="opret">
 <header th:replace="fragments/header :: commonHeader"></header>
 <div class="main-wrapper">
     <div class="content">
         <h1>Opret dig her</h1>
+
+        <table id="customers">
+            <tr>
+                <th>Year</th>
+                <th>Length</th>
+                <th>Title</th>
+                <th>Subject</th>
+                <th>Popularity</th>
+                <th>Awards</th>
+            </tr>
+            <tr th:each="movie : ${ønskeliste}">
+                <td th:text="${movie.year}"></td>
+                <td th:text="${movie.length}"></td>
+                <td th:text="${movie.title}"></td>
+                <td th:text="${movie.subject}"></td>
+                <td th:text="${movie.popularity}"></td>
+                <td th:text="${movie.awards}"></td>
+            </tr>
+        </table>
         </div>
         <footer th:replace="fragments/footer :: commonFooter"></footer>
     </div>

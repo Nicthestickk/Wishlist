@@ -1,43 +1,52 @@
 package ønskeliste.demo.model;
 
+import java.util.Objects;
+
 public class Ønske {
 
-    private int id;
-    private String navn;
-    private String link;
+    private int ID;
+    private String title;
+    private String URL;
     private String beskrivelse;
-    private int ØnskeListeID;
 
-    public Ønske(int id, String navn, String link, String beskrivelse, int ØnskeListeID) {
-        this.id = id;
-        this.navn = navn;
-        this.link = link;
+    public Ønske(){
+
+    }
+
+    public Ønske(int id, String title, String URL, String beskrivelse) {
+        this.ID = id;
+        this.title = title;
+        this.URL = URL;
         this.beskrivelse = beskrivelse;
-        this.ØnskeListeID = ØnskeListeID;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, URL);
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getID() {
+        return ID;
     }
 
-    public String getNavn() {
-        return navn;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public String getTitle() {
+        return title;
     }
 
-    public String getLink() {
-        return link;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public String getURL() {
+        return URL;
+    }
+
+    public void setURL(String URL) {
+        this.URL = URL;
     }
 
     public String getBeskrivelse() {
@@ -47,21 +56,16 @@ public class Ønske {
     public void setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
     }
-    public int getØnskeListeID() {
-        return ØnskeListeID;
-    }
-    public void setØnskeListeID(int ønskeListeID) {
-        ØnskeListeID = ønskeListeID;
-    }
+
 
     @Override
     public String toString() {
         return "Ønske{" +
-                "id=" + id +
-                ", navn='" + navn + '\'' +
-                ", link='" + link + '\'' +
+                "id=" + ID +
+                ", navn='" + title + '\'' +
+                ", link='" + URL + '\'' +
                 ", beskrivelse='" + beskrivelse + '\'' +
-                ", ØnskeListeID=" + ØnskeListeID +
+                ", ØnskeListeID=" +
                 '}';
     }
 }

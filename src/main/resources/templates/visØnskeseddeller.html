@@ -8,21 +8,7 @@
 <div class="main-wrapper">
     <div class="content">
         <h1>Find den ønskede ønskeliste, ved at indtaste emailen der har oprettet den, her</h1>
-        <table id="ønskeLister">
-            <tr>
-                <th>id</th>
-                <th>navn</th>
-                <th>link</th>
-                <th>beskrivelse</th>
-            </tr>
-            <tr th:each="ønske : ${ønske}">
-            <td th:text="${ønske.getId}"></td>
-            <td th:text="${ønske.navn}"></td>
-            <td th:text="${ønske.link}"></td>
-            <td th:text="${ønske.beskrivelse}"></td>
-            </tr>
-        </table>
-
+</div>
 </div>
     <footer th:replace="fragments/footer :: commonFooter"></footer>
 </div>
