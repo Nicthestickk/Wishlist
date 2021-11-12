@@ -10,15 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ØnskeRepo {
-    List<Ønske> ønsker;
+    List<Ønske> ønskes;
     Connection conn = DBManager.getConnection();
 
     public List<Ønske> getAllØnsker(){
-        ønsker = new ArrayList<>();
+        ønskes = new ArrayList<>();
 
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
         try {
-            stmt = conn.prepareStatement("SELECT * FROM ønske");
+            stmt = conn.prepareStatement("SELECT * FROM b6f9503510677f.ønske");
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()) {
@@ -28,7 +28,7 @@ public class ØnskeRepo {
                         rs.getString("URL"),
                         rs.getString("beskrivelse")
                 );
-                ønsker.add(ønske);
+                ønskes.add(ønske);
             }
 
         } catch (SQLException e) {
@@ -36,6 +36,41 @@ public class ØnskeRepo {
             System.out.println(e.getMessage());
         }
 
-        return ønsker;
+
+        return ønskes;
+    }
+
+    public List<Ønske> tilføjØnskerTilØnskeListe(Ønske ønske) throws SQLException {
+        PreparedStatement stmt;
+
+        try {
+            stmt = conn.prepareStatement("INSERT INTO ønske (ID, title, URL, beskrivelse) VALUES (?,?,?,?)");
+
+            stmt.setInt(1, ønske.getID());
+            stmt.setString(2, ønske.getTitle());
+            stmt.setString(3, ønske.getURL());
+            stmt.setString(4, ønske.getBeskrivelse());
+
+            return ønskes;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            return ønskes;
+        }
     }
 }
+    /*private List<Ønske> unpackQuery(ResultSet resultSet) throws SQLException {
+        Wishes = new ArrayList<>();
+
+        while (resultSet.next()) {
+
+            Ønske ønske = new Ønske(
+                    resultSet.getInt("ønskeId"),
+                    resultSet.getString("ønskeTitle"),
+                    resultSet.getString("ønskeURL"),
+                    resultSet.getString("ønskeBeskrivelse"));
+            Wishes.add(ønske);
+        }
+        return Wishes;
+    }
+}*/

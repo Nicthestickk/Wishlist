@@ -9,10 +9,6 @@ public class Ønske {
     private String URL;
     private String beskrivelse;
 
-    public Ønske(){
-
-    }
-
     public Ønske(int id, String title, String URL, String beskrivelse) {
         this.ID = id;
         this.title = title;
@@ -60,12 +56,11 @@ public class Ønske {
 
     @Override
     public String toString() {
-        return "Ønske{" +
+        return "Ønsker{" +
                 "id=" + ID +
-                ", navn='" + title + '\'' +
-                ", link='" + URL + '\'' +
+                ", title='" + title + '\'' +
+                ", URL='" + URL + '\'' +
                 ", beskrivelse='" + beskrivelse + '\'' +
-                ", ØnskeListeID=" +
                 '}';
     }
 }

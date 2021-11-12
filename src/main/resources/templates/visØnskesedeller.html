@@ -9,6 +9,21 @@
     <div class="content">
         <h1>Find den ønskede ønskeliste, ved at indtaste emailen der har oprettet den, her</h1>
 </div>
+    <table class="wishlist">
+        <tr>
+            <th>Ønske ID</th>
+            <th>Ønske Titel</th>
+            <th>Ønske URL</th>
+            <th>Ønske Beskrivelse</th>
+        </tr>
+        
+        <tr th:each="Wish : ${Wishes}">
+            <td th:text="${Wish.getID}"></td>
+            <td th:text="${Wish.getTitle}"></td>
+            <td th:text="${Wish.getURL}"></td>
+            <td th:text="${Wish.getBeskrivelse()}"></td>
+        </tr>
+    </table>
 </div>
     <footer th:replace="fragments/footer :: commonFooter"></footer>
 </div>
